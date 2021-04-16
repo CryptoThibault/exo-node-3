@@ -28,7 +28,6 @@ app.get('/calc/:op/:nb1/:nb2', async (req, res) => {
       nb2: nb2,
       result: calc(op, nb1, nb2)
     }
-    if (isNaN(jsobj.result)) { /*change result to error*/ }
     res.json(jsobj)
   } catch (e) { res.send(e.message) }
 })

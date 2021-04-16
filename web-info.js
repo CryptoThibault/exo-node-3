@@ -11,7 +11,7 @@ const main = async () => {
   const dom = new JSDOM(info.data)
   const jsobj = {
     url: url,
-    contentLenght: dom.window.document.querySelector("html").textContent.split('').length,
+    contentLenght: dom.window.document.querySelector("html").textContent.length,
     title: dom.window.document.querySelector("title").textContent,
     nbURls: dom.window.document.querySelectorAll("link").length,
     nbImgs: dom.window.document.querySelectorAll("img").length
