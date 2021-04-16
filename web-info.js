@@ -4,6 +4,7 @@ const fsPromises = require('fs/promises')
 
 if (process.argv.length !== 3) {
   console.log('Usage: node web-info.js link')
+  process.exit(1)
 }
 const main = async () => {
   const url = process.argv[2]
